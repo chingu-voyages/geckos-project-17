@@ -1,0 +1,82 @@
+body {
+  margin: 40px;
+}
+
+button {
+  margin: 5px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 70px 3fr 1fr;
+  grid-template-areas:
+  "nav nav"
+  "challenge editor"
+  "control console";
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  padding: 5px;
+  border: 1px solid red;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+#nav {
+  grid-area: nav;
+  display: inline;
+  max-height: 30px;
+}
+
+#nav > h1 {
+  display: inline;
+  float: left;
+}
+
+#nav > ul li {
+  display: inline;
+  float: right;
+  padding: 5px;
+}
+
+#challenge {
+  grid-area: challenge;
+  overflow: scroll;
+}
+
+#editor {
+  grid-area: editor;
+  overflow: scroll;
+  min-height: 300px;
+}
+
+#console {
+  grid-area: console;
+  overflow: scroll;
+}
+
+#control {
+  grid-area: control;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+@media (max-width: 430px) {
+  .wrapper {
+    grid-template-rows: auto;
+    grid-template-areas:
+    "nav nav"
+    "challenge challenge"
+    "editor editor"
+    "console console"
+    "control control";
+  }
+
+  #challenge {
+    max-height: 150px;
+  }
+}
