@@ -8,6 +8,18 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
+  <!--modal displays when challenge complete-->
+  <div class="modal">
+    <div class="modalText">
+      <p>Challenge complete!</p>
+      <div>
+        <button type="button" id="next">Next</button>
+        <button type="button" id="return">See my solution</button>
+      </div>
+    </div>
+  </div> <!--end modal-->
+
   <div class="wrapper">
 
     <div id="nav" class="box">
@@ -20,14 +32,11 @@
     </div>
 
     <div id="challenge" class="box">
-      <h2>Challenge Description</h2>
-      <p>Cupcake ipsum dolor. Sit amet candy. Soufflé pastry sweet roll muffin cupcake caramels danish fruitcake icing. Marshmallow pie macaroon.</p>
-
-      <p>Ice cream cheesecake wafer lemon drops pudding gummies macaroon. Biscuit donut croissant jujubes soufflé cupcake jujubes. Cookie cupcake gummies cake lemon drops icing oat cake candy canes caramels.</p>
+  
     </div>
 
     <div id="editor" class="box">
-      <p>Code editing happens here...</p>
+      <p>code goes here</p>
     </div>
 
     <div id="console"class="box">
@@ -35,11 +44,18 @@
     </div>
 
     <div id="control" class="box">
-      <button id="test">Test</button>
-      <button id="reset">Reset</button>
-      <p>Alert: [1, 2, 3] should output [2, 4, 6]</p>
+      <button type="button" id="test">Test</button>
+      <button type="button" id="reset">Reset</button>
+      <p id="alerts"></p>
     </div>
 
   </div> <!--end wrapper-->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="js/euler-data.js"></script>
+  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
